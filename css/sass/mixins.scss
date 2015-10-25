@@ -1,0 +1,43 @@
+// @mixin transition ($amount) {
+//   // -webkit-transition: all $amount ease-in-out;
+//   //    -moz-transition: all $amount ease-in-out;
+//   //     -ms-transition: all $amount ease-in-out;
+//           transition: all  ease-in-out;
+// }
+
+// @mixin transform ($amount) {
+//   -webkit-transform: translateY($amount);
+//      -moz-transform: translateY($amount);
+//       -ms-transform: translateY($amount);
+//           transform: translateY($amount);
+
+// }
+
+// @mixin visibility ($amount) {
+//   -webkit-backface-visibility: $amount;
+//      -moz-backface-visibility: $amount;
+//       -ms-backface-visibility: $amount;
+//           backface-visibility: $amount;
+
+// }
+
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: '';
+
+  @for $i from 1 through $max {
+      $animations: #{$animations + nth($animate, $i)};
+
+      @if $i < $max {
+          $animations: #{$animations + ", "};
+      }
+  }
+
+          animation: $animations;
+}
+
+@mixin keyframes($animationName) {
+    @keyframes #{$animationName} {
+        @content;
+    }
+}

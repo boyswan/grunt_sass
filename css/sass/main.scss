@@ -1,0 +1,117 @@
+*{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  background: #d0a88d;
+  cursor:default;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Fix for preserving font sizes on iPhones (at least) */
+  -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;  
+}
+
+.link{
+  color: white;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px dotted #fff;
+
+}
+
+a:link{
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  
+}
+
+a:hover{
+  color: #a93345;
+  transition: all 0.3s ease-in-out;
+}
+
+.header {
+  position: absolute;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  z-index:100;  
+  font-size:2em;
+  font-weight:bold;
+  margin-left: 5%;
+  margin-top: 24px;
+  pointer-events:none;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.header.toggle{
+  z-index: 99999;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.container {
+  position:fixed; 
+  bottom: 0;
+  width: 100%;
+}
+
+.block {
+  float: left;
+  position: relative;
+  height: 80px;
+  width:10%;
+}
+
+.block--arrow {
+  float: left;
+  position: relative;
+  height: 80px;
+  width:10%;
+  background-color: red;
+}
+
+
+/*=================================================*/
+
+.handle--colour__1{
+  background-color: #a93345;
+}
+.handle--colour__2{
+  background-color: #7AA1DC;
+}
+.handle--colour__3{
+  background-color: #a95b33;
+}
+.handle--colour__4{
+  background-color: #64b089;
+}
+.handle--colour__5{
+  background-color: #faf039;
+}
+.handle--colour__6{
+  background-color: #3965ac;
+}
+.handle--colour__7{
+  background-color: #e4710c;
+}
+.handle--colour__8{
+  background-color: #7bc7e5;
+}
+.handle--colour__9{
+  background-color: #00b495;
+}
+.handle--colour__10{
+  background-color: #805180;
+}
+
+/*=================================================*/
+
+

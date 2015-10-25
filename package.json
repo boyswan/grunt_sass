@@ -1,0 +1,18 @@
+{
+  "name": "Portfolio",
+  "version": "0.1.0",
+  "author": "Jack Boyce",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-cssc": "*",
+    "grunt-autoprefixer": "*",
+    "matchdep": "*"
+  },
+  "dependencies": {
+    "grunt-contrib-imagemin": "^0.8.0"
+  }
+}

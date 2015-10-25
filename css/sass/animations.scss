@@ -1,0 +1,79 @@
+.arrow--up{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 50px;
+  margin: auto;
+  text-align: center;
+  background-image: url('/Lisssten/images/arrowup.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include animation(moveUp 1s 0s infinite);
+}
+
+@include keyframes(moveUp) {
+  0% { 
+  	bottom: 0;}
+  50% {
+  	bottom: 10px;}
+  50% { 
+  	bottom: -20px;}
+  100% { 
+  	bottom: 0;}
+}
+
+.info-animation {
+	span{
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		right: 0;
+		background-image: url('/Lisssten/images/sound.svg');
+		background-repeat: no-repeat;
+		background-size: 150%;
+		background-position: center;
+		z-index:99;
+		opacity:1;
+		pointer-events: none;
+		@include animation(none);
+	}
+ 
+	@for $i from 0 through 3 {
+		&.on{
+			span:nth-child(#{$i+1}n){
+				@include animation(infoAnim 1s #{0.33*$i}s infinite linear);
+			}
+		}
+    &.off{
+      span:nth-child(#{$i+1}n){
+        @include animation(infoAnimOff 0.12s #{0.33*$i}s linear);
+      }
+    }
+	}
+}
+
+.info-animation span.toggle{
+  background-image: url('/Lisssten/images/whitesound.svg') !important;
+  // transition: all 0.3s ease-in-out;
+
+}
+
+@include keyframes (infoAnim) {
+  0% {
+  	transform:translate(0px, 0px) scale(0.5);}
+  20% {
+    transform:translate(-40px, 0px) scale(1);}
+  100% {
+    transform:translate(0px, 0px) scale(0.25);}
+}
+
+@include keyframes (infoAnimOff) {
+  0% {
+    transform:translate(-40px, 0px) scale(1);}
+  100% {
+    transform:translate(0px, 0px) scale(0.25);}
+}

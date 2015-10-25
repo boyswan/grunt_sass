@@ -1,0 +1,131 @@
+
+#info{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 100%;
+  right: 0;
+  overflow: hidden;
+  cursor:default;
+  z-index:999;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.info-detail{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url('/Lisssten/images/button.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  right: 0;
+  overflow: hidden;
+  cursor:default;
+  z-index:999;
+  pointer-events: none;
+  // transition: all 0.3s ease;
+
+}
+
+.info-detail.toggle{
+  background-image: url('/Lisssten/images/blackbutton.svg');
+  // transition: all 0.3s ease;
+
+}
+
+#info:hover{
+  background-color: #fff; 
+  transition: all 0.3s ease-in-out;
+
+}
+
+#info.toggle{
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+
+}
+
+#info.toggle:hover{
+  background-color: #fff;
+    transition: all 0.3s ease-in-out;
+
+}
+.info-fill{
+  position: absolute;
+  height:100%;
+  width:100%;
+  background-color:#000;
+  opacity: 0;
+  z-index: 998;
+  pointer-events:none;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.info-fill.toggle{
+  opacity: 0.75;
+  pointer-events:all;
+  transition: all 0.3s ease-in-out;
+}
+
+.info-text{
+  position: fixed;
+  margin-left: 5%;
+  margin-right: 5%;
+  top: 85px;
+  color: white;
+  font-size: 22;
+  opacity: 0;
+  z-index: 99999;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.info-text.toggle{
+  pointer-events: all;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+/*=================================================*/
+
+.first--info__wrap{
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  pointer-events: none;
+  font-size: 2rem;
+  font-weight: 800;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.first--info__wrap.toggle{
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+
+}
+
+.first--info__text{
+  // position: absolute;
+  // margin-top: 500px;
+}
+
+.container-buttons{
+  position: absolute;
+  right: 0;
+  margin-right: 5%;
+  margin-top: 40px;
+  z-index: 999;
+}
+
